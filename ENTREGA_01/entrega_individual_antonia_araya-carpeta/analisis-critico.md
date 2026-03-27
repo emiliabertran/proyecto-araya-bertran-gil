@@ -7,7 +7,7 @@
 
 # Análisis crítico
 
-## ¿Qué espero contar y/o revelar del tema?
+## ¿Qué espero contar del tema?
 
 A través de este proyecto, espero analizar y describir cómo se comporta el fenómeno de la participación chilena en el certamen Miss Universo, específicamente en relación con el origen territorial de las candidatas y su desempeño en el puesto que logran en la competencia. Más que revelar un hecho oculto, el objetivo es identificar patrones y tendencias que permitan comprender si existe una relación entre el lugar de origen y las posibilidades de alcanzar resultados destacados, como el Top 12.
 
