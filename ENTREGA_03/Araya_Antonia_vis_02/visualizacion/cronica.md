@@ -1,7 +1,7 @@
 # De amateurs a profesionales: Cómo cambió el perfil de las Miss Chile
 
 
-![Evolución de la experiencia previa en Miss Chile](vis_02.jpg)
+![Evolución de la experiencia previa en Miss Chile](vis_02.jpg.png)
 
 Durante mucho tiempo, la historia del Miss Chile fue la de "el diamante en bruto": la idea de que una joven común y corriente podía ser descubierta y transformada en reina de la noche a la mañana. Era un relato romántico que funcionó muy bien en los años 90. Pero, si miramos los datos de las ganadoras desde 1990 hasta hoy, la realidad es otra. Como muestra el gráfico, el concurso dejó de ser una escuela para transformarse en una vitrina para profesionales.
 
