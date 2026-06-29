@@ -16,16 +16,16 @@ h1 {
     color: #FAF9F6; 
     text-align: center; 
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 60px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 18px; 
+    font-size: 20px; 
     line-height: 1.6; 
     max-width: 600px;
     margin: 0 auto; 
@@ -102,11 +102,21 @@ p {
 
 /* Icónicas */
 #iconicas {
-    background-color: #C9A86A; 
-    color: #0A1633; 
+    background-color: #FAF9F6; 
+    color: #C9A86A; 
     justify-content: flex-start;
 }
 #iconicas h2 {
+    text-align: center;
+    color: #C9A86A;
+}
+
+#iconicas p { 
+    text-align: center;      
+    max-width: 700px;       
+    margin: 0 auto 30px auto; 
+    font-size: 16px;
+    line-height: 1.6;
     color: #0A1633;
 }
 
@@ -130,7 +140,7 @@ p {
 }
 
 .collage-title {
-    font-size: 28px;
+    font-size: 40px;
     color: #FAF9F6; 
     margin-bottom: 25px;
     line-height: 1.3;
@@ -208,35 +218,78 @@ p {
 
 /* Promesa */
 #promesa {
-    background-color: #FAF9F6; 
+    background-color: #1C1C1C; 
     color: #0A1633; 
 }
-#promesa h2 {
-    color: #C9A86A;
-}
 
-/* ---- SECCIÓN PROMESA (ASIMÉTRICA SIMPLIFICADA) ---- */
-.contenedor-asimetrico {
+.contenedor-promesa-grid {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px; /* Lo agrandamos un poquito más para que el collage luzca mejor */
     margin: 0 auto;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
     text-align: left;
 }
 
-.bloque-izquierdo { flex: 1.2; }
-.bloque-derecho   { flex: 0.8; }
+/* Distribución de las dos columnas principales */
+.bloque-izquierdo { 
+    flex: 1; 
+    width: 100%;
+}
 
-#promesa h2 { text-align: left; margin-top: 5px; }
-#parrafo_historia { color: #0A1633; margin: 0; max-width: 100%; }
-.seccion-tag { color: #94763a; } /* Ajuste de contraste para fondo crema */
+/* 📊 Transformamos la columna de fotos en una cuadrícula de 2x2 */
+.bloque-derecho-imagenes { 
+    flex: 1;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    gap: 12px; /* Espacio de separación entre las 4 fotos */
+    width: 100%;
+}
+
+/* El recuadro blanco de las palabras */
+.tarjeta-texto {
+    background-color: #ffffff; 
+    border: 1px solid rgba(201, 168, 106, 0.25); 
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(10, 22, 51, 0.05); 
+}
+
+.seccion-tag { color: #94763a; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+#promesa h2  { color: #C9A86A; text-align: left; margin: 5px 0 20px 0; font-size: 36px; }
+#parrafo_historia { color: #0A1633; margin: 0; max-width: 100%; font-size: 16px; line-height: 1.7; }
+
+/* 🖼️ Configuración y ALTURA de las fotos */
+.foto-promesa {
+    height: 200px; /* 👈 MODIFICA ESTO si quieres que el collage sea más alto o más bajo */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(10, 22, 51, 0.1);
+    border: 1px solid rgba(201, 168, 106, 0.15);
+}
+
+.foto-promesa img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .contenedor-promesa-grid { flex-direction: column; text-align: center; gap: 35px; }
+    #promesa h2 { text-align: center; }
+}
 
 /* Compiten */
 #compiten {
-    background-color: #1C1C1C; 
+    background-color: #0A1633; 
     color: #FAF9F6;
+    width: 100% !important;   
+    max-width: 100% !important;  
+    margin: 0;                   
+    box-sizing: border-box;
 }
 #compiten h2 {
     color: #C9A86A;
@@ -244,8 +297,12 @@ p {
 
 /* Evolución */
 #evolucion {
-    background-color: #0A1633; 
-    color: #FAF9F6;
+    background-color: #FAF9F6; 
+    color: #0A1633;
+    width: 100% !important; 
+    max-width: 100% !important; 
+    margin: 0;                   
+    box-sizing: border-box;
 }
 #evolucion h2 {
     color: #C9A86A;
@@ -253,17 +310,123 @@ p {
 
 /* Trayectorias */
 #trayectorias {
-    background-color: #FAF9F6; 
-    color: #0A1633;
+    background-color: #1C1C1C; 
+    color: #FAF9F6;
+    width: 100% !important;    
+    max-width: 100% !important;  
+    margin: 0;                  
+    box-sizing: border-box;
+    padding: 60px 20px;
 }
+
+.contenedor-trayectorias {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seccion-tag {
+    font-size: 11px; 
+    letter-spacing: 0.2em; 
+    text-transform: uppercase; 
+    color: #C9A86A; 
+    display: block; 
+    margin-bottom: 12px;
+}
+
 #trayectorias h2 {
-    color: #0A1633;
+    color: #C9A86A;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
+
+.parrafo-introduccion {
+    max-width: 750px; 
+    margin: 0 auto 40px auto;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #FAF9F6;
+}
+
+/* 📊 Recuadro punteado para el gráfico */
+.caja-grafico-trayectoria {
+    background-color: rgba(201, 168, 106, 0.05); /* Fondo dorado sutil con opacidad */
+    border: 2px dashed rgba(201, 168, 106, 0.4); /* Línea punteada elegante */
+    border-radius: 16px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    color: #FAF9F6;
+}
+.caja-grafico-trayectoria p { margin: 0 0 5px 0; font-weight: bold; color: #C9A86A; }
+.caja-grafico-trayectoria span { font-size: 14px; opacity: 0.7; }
+
+/* 👑 Fila horizontal para las 3 tarjetas de las reinas */
+.contenedor-tarjetas-reinas {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Estilo base de cada tarjeta */
+.tarjeta-reina {
+    flex: 1;
+    background-color: #ffffff; /* Fondo blanco para que resalten los textos */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 168, 106, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra marcada para dar volumen */
+}
+
+/* 📸 Espacio contenedor de la foto de la reina */
+.tarjeta-header-foto {
+    width: 100%;
+    height: 180px; /* Controla la altura visual de la imagen */
+    overflow: hidden;
+    background-color: #0A1633;
+}
+
+.tarjeta-header-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta y adapta la foto para que nunca se deforme */
+    display: block;
+}
+
+/* Contenido escrito de la tarjeta */
+.tarjeta-body {
+    padding: 22px 15px;
+    text-align: center;
+}
+
+.tarjeta-body h3 {
+    color: #0A1633; /* Azul oscuro para máxima legibilidad sobre fondo blanco */
+    font-size: 19px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.dato-reina {
+    color: #94763a;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.emojis-footer {
+    font-size: 22px;
+}
+
+
 
 /* Hallazgo */
 #hallazgo {
     background-color: #050b1a; 
     color: #FAF9F6;
+    width: 100% !important;      
+    max-width: 100% !important;  
+    margin: 0;                   
+    box-sizing: border-box;
 }
 #hallazgo h2 {
     color: #C9A86A;
