@@ -1,20 +1,319 @@
+/* ESTILOS GENERALES  */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; 
+}
+
 body {
-    background-color: #0A1633; /* Cambia el color de fondo */
-    font-family: GARAMOND, sans-serif; /* Cambia el tipo de letra */
-    color: #FAF9F6; /* Cambia el color del texto principal */
+    background-color: #0A1633; 
+    font-family: 'Garamond', serif; 
+    color: #FAF9F6; 
+    margin: 0; 
+    padding: 0;
 }
 
-/* 2. Estilizando el título principal */
 h1 {
-    color: #FAF9F6; /* Un tono azul oscuro */
-    text-align: center; /* Centra el texto */
-    margin-top: 50px; /* Le da espacio arriba */
+    color: #FAF9F6; 
+    text-align: center; 
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
-/* 3. Estilizando los párrafos */
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
 p {
-    font-size: 18px; /* Tamaño de la letra */
-    line-height: 1.6; /* Espaciado entre líneas */
+    font-size: 18px; 
+    line-height: 1.6; 
     max-width: 600px;
-    margin: 0 auto; /* Centra el bloque del párrafo */
+    margin: 0 auto; 
+}
+
+/*  MENÚ DE NAVEGACIÓN */
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #050b1a; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(201, 168, 106, 0.2); 
+}
+
+.navbar .logo {
+    color: #C9A86A;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.navbar .menu-links a {
+    color: #FAF9F6;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu-links a:hover {
+    color: #C9A86A; 
+}
+
+/* ---- ESTRUCTURA DE SECCIONES ---- */
+.hero {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #0A1633; 
+}
+
+.seccion-info {
+    min-height: 100vh; 
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen {
+  width: 100%;           
+  max-width: 300px;       
+  height: auto;          
+  display: block;       
+  margin: 20px auto;     
+}
+
+
+/*  ALTERNANCIA DE COLORES POR SECCIÓN  */
+
+/* Icónicas */
+#iconicas {
+    background-color: #C9A86A; 
+    color: #0A1633; 
+    justify-content: flex-start;
+}
+#iconicas h2 {
+    color: #0A1633;
+}
+
+/* SECCIÓN COLLAGE DE IMÁGENES */
+
+.contenedor-collage {
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.collage-tag {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A86A; 
+    display: block;
+    margin-bottom: 6px;
+}
+
+.collage-title {
+    font-size: 28px;
+    color: #FAF9F6; 
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+/* La estructura de la grilla */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; 
+}
+
+/* Comportamiento de cada tarjeta adaptado a tu estilo */
+.collage-item {
+    position: relative;
+    background-color: #050b1a; 
+    border: 1px solid rgba(201, 168, 106, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto sutil al pasar el mouse por las tarjetas */
+.collage-item:hover {
+    transform: translateY(-3px);
+    border-color: #C9A86A;
+}
+
+/* Tarjeta grande de Cecilia Bolocco */
+.collage-item.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 355px;
+}
+
+/* Ajuste de imágenes */
+.collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.75; 
+}
+
+/* Texto sobre las imágenes */
+.collage-caption {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(transparent, rgba(10, 22, 51, 0.95)); 
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.collage-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #FAF9F6; 
+    margin-bottom: 4px;
+}
+
+.collage-year {
+    font-size: 11px;
+    color: #C9A86A; 
+}
+
+/* Promesa */
+#promesa {
+    background-color: #FAF9F6; 
+    color: #0A1633; 
+}
+#promesa h2 {
+    color: #C9A86A;
+}
+
+/* ---- SECCIÓN PROMESA (ASIMÉTRICA SIMPLIFICADA) ---- */
+.contenedor-asimetrico {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    text-align: left;
+}
+
+.bloque-izquierdo { flex: 1.2; }
+.bloque-derecho   { flex: 0.8; }
+
+#promesa h2 { text-align: left; margin-top: 5px; }
+#parrafo_historia { color: #0A1633; margin: 0; max-width: 100%; }
+.seccion-tag { color: #94763a; } /* Ajuste de contraste para fondo crema */
+
+/* Compiten */
+#compiten {
+    background-color: #1C1C1C; 
+    color: #FAF9F6;
+}
+#compiten h2 {
+    color: #C9A86A;
+}
+
+/* Evolución */
+#evolucion {
+    background-color: #0A1633; 
+    color: #FAF9F6;
+}
+#evolucion h2 {
+    color: #C9A86A;
+}
+
+/* Trayectorias */
+#trayectorias {
+    background-color: #FAF9F6; 
+    color: #0A1633;
+}
+#trayectorias h2 {
+    color: #0A1633;
+}
+
+/* Hallazgo */
+#hallazgo {
+    background-color: #050b1a; 
+    color: #FAF9F6;
+}
+#hallazgo h2 {
+    color: #C9A86A;
+}
+
+/* BOTÓN COMENZAR */
+.boton-comenzar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 35px;
+    background-color: #C9A86A; 
+    color: #0A1633; 
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: all 0.3s ease;
+}
+
+.boton-comenzar:hover {
+    background-color: #e5c384; 
+    transform: scale(1.05); 
+}
+
+/* BRILLOS EN PORTADA */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.brillo {
+    position: absolute;
+    top: -10px; 
+    background-color: #C9A86A; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    box-shadow: 0 0 10px #C9A86A, 0 0 20px #FAF9F6; 
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1; 
+    }
+    100% {
+        transform: translateY(105vh) scale(1); 
+        opacity: 0; 
+    }
 }
