@@ -612,17 +612,17 @@ p {
     }
 }
 /* =========================================================================
-   🛡️ AJUSTES DE DISEÑO CORREGIDOS (Cero cortes, contraste premium)
+   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Unificación y espacio responsivo)
    ========================================================================= */
 
-/* Contenedor adaptativo para los gráficos de Vega/Altair */
-.contenedor-grafico-vega {
+/* Contenedor unificado estilo tarjeta clara para los TRES gráficos de barras */
+.contenedor-grafico-vega, .viz-full-width {
     width: 100%;
-    max-width: 850px; /* Más ancho para que no se corte la leyenda derecha de estudios */
+    max-width: 960px; /* Ampliado a 960px para que entren todas las columnas de certámenes y leyendas derechas */
     margin: 30px auto;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
-    background-color: #FAF9F6; /* Fondo claro sofisticado para que resalten las letras oscuras */
+    background-color: #FAF9F6; /* Fondo claro sofisticado para dar perfecto contraste */
     border: 1px solid rgba(201, 168, 106, 0.3);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -631,31 +631,28 @@ p {
     overflow: hidden;
 }
 
-/* Forzar que los iframes dentro de los bloques usen el alto real necesario */
-.contenedor-grafico-vega iframe {
+/* Forzar que las cajas de gráficos e iframes respiren sin cortes */
+.contenedor-grafico-vega iframe, .viz-full-width iframe, .grafico-idh-iframe {
     width: 100%;
-    height: 520px; /* Más alto para que no se corten las etiquetas de abajo ni los títulos */
+    height: 480px; /* Altura ideal para IDH y Estudios */
     border: none;
+    background: transparent;
     display: block;
 }
 
-/* Ajuste del mapa para que se vea COMPLETO con la leyenda y el diamante final */
+/* Altura extendida específica para el gráfico final (El Trampolín) para que quepan sus etiquetas */
+#vis-destino iframe {
+    height: 400px;
+}
+
+/* Ajuste milimétrico del mapa para que quepa la leyenda completa, el texto y el rombo dorado */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
-    height: 980px; /* Aumentado a 980px para dar espacio a la fuente y al ornamento */
+    height: 1020px; /* Subido a 1020px para asegurar que fluyan las líneas finales */
     border: none;
     background: transparent;
     overflow: hidden;
     display: block;
     margin: 0 auto;
-}
-
-/* Gráfico de IDH Comunal fluido */
-.grafico-idh-iframe {
-    width: 100%;
-    height: 560px;
-    border: none;
-    background: transparent;
-    overflow: hidden;
 }
