@@ -2,30 +2,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const hero = document.querySelector('.hero');
 
-    // Función para crear un brillo
+    // Función para crear un brillo (Tu código original intacto)
     function crearBrillo() {
         const brillo = document.createElement('div');
         brillo.classList.add('brillo');
-
-        // Posición horizontal aleatoria (0% a 100% del ancho de la pantalla)
         brillo.style.left = Math.random() * 100 + 'vw';
-
-        // Tamaño aleatorio para que se vea más natural (entre 3px y 8px)
         const tamano = Math.random() * 5 + 3;
         brillo.style.width = tamano + 'px';
         brillo.style.height = tamano + 'px';
-
-        // Velocidad de caída aleatoria (entre 2 y 5 segundos)
         const duracion = Math.random() * 3 + 2;
         brillo.style.animationDuration = duracion + 's';
-
-        // Opacidad aleatoria inicial
         brillo.style.opacity = Math.random();
 
-        // Agregamos el brillo a la portada
         if (hero) hero.appendChild(brillo);
 
-        // Eliminamos el brillo después de que termine su animación para no colapsar la memoria
         setTimeout(() => {
             brillo.remove();
         }, duracion * 1000);
@@ -35,38 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(crearBrillo, 150);
 
     // =========================================================================
-    // 📊 INYECCIÓN NATIVA DE GRÁFICOS VEGA-LITE (Clase de la Profesora)
+    // 📊 REPARACIÓN DE GRÁFICOS: CARGA DIRECTA SEGURO SIN CORTAR LA PÁGINA
     // =========================================================================
     
-    // Gráfico A: Evolución Nivel de Estudios (Colores Nuevos)
+    // Gráfico 1: Nivel de Estudios
     if (document.getElementById('vis-estudios')) {
-        fetch('grafico_nivel_estudios_colores_nuevos.html')
-            .then(response => response.text())
-            .then(htmlText => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                const scriptContent = doc.querySelector('script').textContent;
-                const specMatch = scriptContent.match(/var spec = (\{.*?\});/s);
-                if (specMatch) {
-                    const spec = JSON.parse(specMatch[1]);
-                    vegaEmbed("#vis-estudios", spec, {"mode": "vega-lite"}).catch(console.error);
-                }
-            }).catch(err => console.error("Error cargando estudios:", err));
+        const iframeEstudios = document.createElement('iframe');
+        iframeEstudios.src = 'grafico_nivel_estudios_colores_nuevos.html';
+        iframeEstudios.style.width = '100%';
+        iframeEstudios.style.height = '480px';
+        iframeEstudios.style.border = 'none';
+        iframeEstudios.style.background = 'transparent';
+        iframeEstudios.setAttribute('scrolling', 'no');
+        document.getElementById('vis-estudios').appendChild(iframeEstudios);
     }
 
-    // Gráfico B: El Trampolín Mediático (Colores Nuevos)
+    // Gráfico 2: El Trampolín Mediático
     if (document.getElementById('vis-destino')) {
-        fetch('grafico_destino_postcertamen_colores_nuevos.html')
-            .then(response => response.text())
-            .then(htmlText => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                const scriptContent = doc.querySelector('script').textContent;
-                const specMatch = scriptContent.match(/var spec = (\{.*?\});/s);
-                if (specMatch) {
-                    const spec = JSON.parse(specMatch[1]);
-                    vegaEmbed("#vis-destino", spec, {"mode": "vega-lite"}).catch(console.error);
-                }
-            }).catch(err => console.error("Error cargando destino:", err));
+        const iframeDestino = document.createElement('iframe');
+        iframeDestino.src = 'grafico_destino_postcertamen_colores_nuevos.html';
+        iframeDestino.style.width = '100%';
+        iframeDestino.style.height = '420px';
+        iframeDestino.style.border = 'none';
+        iframeDestino.style.background = 'transparent';
+        iframeDestino.setAttribute('scrolling', 'no');
+        document.getElementById('vis-destino').appendChild(iframeDestino);
     }
 });
