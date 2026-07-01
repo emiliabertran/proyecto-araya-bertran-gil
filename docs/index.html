@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,6 @@
     <title>Detrás de la corona</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Librerías de Vega/Altair para inyectar gráficos nativos sin scroll -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -22,8 +20,7 @@
             <a href="#promesa">Promesa</a>
             <a href="#compiten">Competidoras</a>
             <a href="#evolucion">Evolución</a>
-            <a href="#trayectorias">Trayectorias</a>
-        </div>
+            <a href="#hallazgo">Hallazgo</a> </div>
     </nav>
 
     <header id="inicio" class="hero">
@@ -33,7 +30,6 @@
         <a href="#cecilia" class="boton-comenzar">Comenzar ↓</a>
     </header>
 
-    <!-- protagonista -->
     <section id="cecilia" class="bolocco">
         <div class="contenedor-narrativo">
             <h1>La ruta hacia el poder detrás de los concursos de belleza en Chile</h1>
@@ -131,9 +127,9 @@
                     La belleza fue el inicio de sus historias; el reconocimiento público fue la consecuencia.
                 </p>
             </div>
+        </div>
     </section>
 
-    <!--  PROMESA  -->
     <section id="promesa" class="seccion-info">
         <div class="contenedor-promesa-grid">
             <div class="bloque-izquierdo">
@@ -163,29 +159,25 @@
         </div>
     </section>
 
-    <!--  ¿QUIÉNES COMPITEN?  -->
     <section id="compiten" class="seccion-info" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
         <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">Geografía e IDH</span>
         <h2 style="text-align: center;">¿Quiénes compiten?</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">Las candidatas chilenas provienen casi exclusivamente de comunas con IDH "Muy Alto" o "Alto". Santiago concentra la mayoría, revelando que el acceso a estos certámenes no se distribuye de manera uniforme en el territorio.</p>
         
-        <!-- Glosario IDH Comunal -->
         <div class="nota-glosario-idh">
             <h3>¿Qué es el IDH Comunal?</h3>
             <p>El Índice de Desarrollo Humano es un indicador que busca medir el desarrollo de cada comuna, evaluando no solo estimaciones económicas, sino que también mide la calidad de vida y el progreso social de los habitantes de un municipio o comuna específica.</p>
         </div>
 
-        <!-- MAPA RESPONSIVO SIN SCROLLS -->
         <div style="width: 100%; max-width: 760px; margin: 0 auto 40px; display: flex; justify-content: center;">
             <iframe src="mapa_chile_v2_labels.html" class="mapa-fluido" scrolling="no"></iframe>
         </div>
 
         <div class="side-text-right" style="max-width: 600px; margin: 0 auto 30px; font-size: 15px; line-height: 1.7; color: #A6A6A6; background: rgba(201, 168, 106, 0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(201, 168, 106, 0.2);">
             <strong style="color: #C9A86A; font-family: 'Playfair Display', serif; font-size: 18px;">Primer hallazgo clave:</strong><br>
-            A pesar que se concentre gran parte en Santiago, existe al menos una ganadora en cada región. Esto puede evidenciar que existe un interés general a lo largo del país en cuanto a los concursos de belleza.
+            A pesar que se concentre gran parte en Santiago, existe al menos una ganadora en cada región. Esto puede evidenciar que existe un interest general a lo largo del país en cuanto a los concursos de belleza.
         </div>
 
-        <!-- GRÁFICO IDH COMUNAL -->
         <div class="viz-full-width" style="width: 100%; max-width: 700px; margin: 0 auto; display: flex; justify-content: center;">
             <iframe src="grafico_idh_comunal.html" class="grafico-idh-iframe" scrolling="no"></iframe>
         </div>
@@ -196,13 +188,11 @@
         </div>
     </section>
 
-    <!-- EVOLUCIÓN  -->
     <section id="evolucion" class="seccion-info" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
         <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">Evolución del perfil</span>
         <h2 style="text-align: center;">Cómo han cambiado las ganadoras</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">En 70 años, el perfil de las candidatas se transformó radicalmente. Del anonimato educacional de mediados del siglo XX al estándar actual: universitaria, con carrera en comunicaciones o leyes, y miles de seguidores.</p>
         
-        <!-- INYECCIÓN NATIVA VEGA: Gráfico de nivel de estudios -->
         <div id="vis-estudios" class="contenedor-grafico-vega"></div>
 
         <div class="stat-row" style="display: flex; gap: 16px; margin: 24px auto 0; max-width: 700px; justify-content: center; flex-wrap: wrap;">
@@ -221,9 +211,7 @@
         </div>
     </section>
 
-    <!--  TRAYECTORIAS  -->
-    <section id="trayectorias" class="seccion-info">
-        <div class="contenedor-trayectorias">
+    <section id="hallazgo" class="seccion-info"> <div class="contenedor-trayectorias">
             <span class="seccion-tag">Trayectorias y permanencia</span>
             <h2>¿Quiénes logran quedarse?</h2>
             <p class="parrafo-introduccion">
@@ -265,16 +253,14 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!--  HALLAZGO -->
-    <section id="hallazgo" class="seccion-info" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
-        <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">El gran hallazgo</span>
-        <h2 style="text-align: center;">El trampolín mediático</h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">Los concursos de belleza en Chile no son solo un espectáculo — son una institution productora de élites mediáticas. Del certamen a la televisión, del set al feed de Instagram: la corona es solo el primer paso.</p>
-        
-        <!-- INYECCIÓN NATIVA VEGA: Gráfico del trampolín -->
-        <div id="vis-destino" class="contenedor-grafico-vega"></div>
+        <div style="margin-top: 60px; width: 100%;">
+            <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">El gran hallazgo</span>
+            <h2 style="text-align: center;">El trampolín mediático</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #FAF9F6;">Los concursos de belleza en Chile no son solo un espectáculo — son una institución productora de élites mediáticas. Del certamen a la televisión, del set al feed de Instagram: la corona es solo el primer paso.</p>
+            
+            <div id="vis-destino" class="contenedor-grafico-vega"></div>
+        </div>
     </section>
 
     <script src="script.js"></script>
