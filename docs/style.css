@@ -615,9 +615,9 @@ p {
    🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes y espaciado premium)
    ========================================================================= */
 
-/* Forzar separación exclusiva abajo de los hallazgos clave para que no asfixien los gráficos */
+/* Forzar separación exclusiva abajo de los hallazgos clave */
 .side-text-right {
-    margin-bottom: 50px !important; /* Esto estira la sección azul/oscura hacia abajo antes de que empiece el gráfico */
+    margin: 30px auto 50px auto !important;
 }
 
 /* Nota de glosario con más aire abajo */
@@ -625,12 +625,12 @@ p {
     margin-bottom: 45px !important;
 }
 
-/* Tarjeta clara unificada para los gráficos de barra */
+/* Tarjeta clara unificada para los TRES gráficos de barra */
 .contenedor-grafico-vega, .viz-full-width {
     width: 100%;
-    max-width: 980px; /* Espacio total para las leyendas derechas */
-    margin: 40px auto 60px auto; /* Equilibra el aire arriba y abajo del recuadro claro */
-    padding: 30px 24px;
+    max-width: 1020px; /* Ampliado para que la leyenda de IDH y del Sí/No respiren completo */
+    margin: 30px auto 60px auto;
+    padding: 35px 25px;
     box-sizing: border-box;
     background-color: #FAF9F6;
     border: 1px solid rgba(201, 168, 106, 0.3);
@@ -641,25 +641,31 @@ p {
     overflow: hidden;
 }
 
-/* Forzar que los iframes internos tengan el alto real necesario para no cortar los ejes */
+/* Forzar que las cajas de gráficos e iframes tengan altura suficiente para las décadas */
 .contenedor-grafico-vega iframe, .viz-full-width iframe, .grafico-idh-iframe {
     width: 100%;
-    height: 520px; /* Para que la palabra "Décadas" y las leyendas respiren completo */
+    height: 580px; /* Subido a 580px para que las letras giradas de los años no sufran cortes */
     border: none;
     background: transparent;
     display: block;
 }
 
+/* Ajuste proporcional para achicar un pelo el gráfico interno y que no tope los bordes */
+.contenedor-grafico-vega iframe, #vis-destino iframe {
+    transform: scale(0.96);
+    transform-origin: top center;
+}
+
 /* Altura específica controlada para el gráfico final del Trampolín */
 #vis-destino iframe {
-    height: 420px;
+    height: 460px;
 }
 
 /* Ajuste definitivo del mapa para que fluyan las fuentes de la base de datos al fondo */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
-    height: 1060px; /* Espacio exacto para el pie de mapa */
+    height: 1060px;
     border: none;
     background: transparent;
     overflow: hidden;
