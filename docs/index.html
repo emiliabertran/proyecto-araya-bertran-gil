@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detrás de la corona</title>
-    <link rel="stylesheet" href="style.css?v=1.5">
+    <link rel="stylesheet" href="style.css?v=1.6">
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -180,4 +180,91 @@
         </div>
 
         <div class="side-text-right">
-            <strong style="color: #C9A86A; font-family: 'Playfair Display', serif;
+            <strong style="color: #C9A86A; font-family: 'Playfair Display', serif; font-size: 18px;">Segundo hallazgo clave:</strong><br>
+            Las comunas vulnerables tienen representation casi nula, evidenciando el sesgo territorial de la industria.
+        </div>
+
+        <div class="viz-full-width">
+            <iframe src="grafico_idh_comunal.html" class="grafico-idh-iframe" scrolling="no"></iframe>
+        </div>
+    </section>
+
+    <section id="evolucion" class="seccion-info" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+        <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">Evolución del perfil</span>
+        <h2 style="text-align: center;">Cómo han cambiado las ganadoras</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">En 70 años, el perfil de las candidatas se transformó radicalmente. Del anonimato educacional de mediados del siglo XX al estándar actual: universitaria, con carrera en comunicaciones o leyes, y miles de seguidores.</p>
+        
+        <div id="vis-estudios" class="contenedor-grafico-vega"></div>
+
+        <div class="stat-row" style="display: flex; gap: 16px; margin: 24px auto 0; max-width: 700px; justify-content: center; flex-wrap: wrap;">
+            <div class="stat-pill" style="flex: 1; min-width: 160px; border: 1px solid #C9A86A; padding: 16px; text-align: center; border-radius: 8px; background: rgba(201, 168, 106, 0.05);">
+                <div class="stat-num" style="font-family: 'Playfair Display', serif; font-size: 28px; color: #C9A86A; font-weight: bold;">155</div>
+                <div style="font-size: 10px; color: #FAF9F6; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px;">Registros analizados</div>
+            </div>
+            <div class="stat-pill" style="flex: 1; min-width: 160px; border: 1px solid #C9A86A; padding: 16px; text-align: center; border-radius: 8px; background: rgba(201, 168, 106, 0.05);">
+                <div class="stat-num" style="font-family: 'Playfair Display', serif; font-size: 28px; color: #C9A86A; font-weight: bold;">73</div>
+                <div style="font-size: 10px; color: #FAF9F6; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px;">Años de historia</div>
+            </div>
+            <div class="stat-pill" style="flex: 1; min-width: 160px; border: 1px solid #C9A86A; padding: 16px; text-align: center; border-radius: 8px; background: rgba(201, 168, 106, 0.05);">
+                <div class="stat-num" style="font-family: 'Playfair Display', serif; font-size: 28px; color: #C9A86A; font-weight: bold;">4</div>
+                <div style="font-size: 10px; color: #FAF9F6; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px;">Certámenes</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hallazgo" class="seccion-info">
+        <div class="contenedor-trayectorias">
+            <span class="seccion-tag">Trayectorias y permanencia</span>
+            <h2>¿Quiénes logran quedarse?</h2>
+            <p class="parrafo-introduccion">
+                No todas las coronadas construyen carreras duraderas. Los datos revelan que la permanencia en los medios se relaciona con el origen social, la experiencia previa y el certamen al que pertenecieron. Algunas brillaron por años; otras desaparecieron al siguiente ciclo.
+            </p>
+
+            <div class="contenedor-tarjetas-reinas">
+                <div class="tarjeta-reina">
+                    <div class="tarjeta-header-foto">
+                        <img src="cecilia.jpg" alt="Cecilia Bolocco">
+                    </div>
+                    <div class="tarjeta-body">
+                        <h3>Cecilia Bolocco</h3>
+                        <p class="dato-reina">+30 años en medios</p>
+                        <div class="emojis-footer">📺 🎬</div>
+                    </div>
+                </div>
+
+                <div class="tarjeta-reina">
+                    <div class="tarjeta-header-foto">
+                        <img src="tonka.jpeg" alt="Tonka Tomicic">
+                    </div>
+                    <div class="tarjeta-body">
+                        <h3>Tonka Tomicic</h3>
+                        <p class="dato-reina">+25 años en medios</p>
+                        <div class="emojis-footer">📺 🎬</div>
+                    </div>
+                </div>
+
+                <div class="tarjeta-reina">
+                    <div class="tarjeta-header-foto">
+                        <img src="emilia.jpeg" alt="Emilia Dides">
+                    </div>
+                    <div class="tarjeta-body">
+                        <h3>Emilia Dides</h3>
+                        <p class="dato-reina">Influencer</p>
+                        <div class="emojis-footer">📱 ✨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; width: 100%;">
+            <span class="seccion-tag" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A86A; display: block; margin-bottom: 8px;">El gran hallazgo</span>
+            <h2 style="text-align: center;">El trampolín mediático</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #FAF9F6;">Los concursos de belleza en Chile no son solo un espectáculo — son una institución productora de élites mediáticas. Del certamen a la televisión, del set al feed de Instagram: la corona es solo el primer paso.</p>
+            
+            <div id="vis-destino" class="contenedor-grafico-vega"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
