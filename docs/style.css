@@ -612,17 +612,27 @@ p {
     }
 }
 /* =========================================================================
-   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Unificación y espacio responsivo)
+   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes y espaciado premium)
    ========================================================================= */
 
-/* Contenedor unificado estilo tarjeta clara para los TRES gráficos de barras */
+/* Forzar separación exclusiva abajo de los hallazgos clave para que no asfixien los gráficos */
+.side-text-right {
+    margin-bottom: 50px !important; /* Esto estira la sección azul/oscura hacia abajo antes de que empiece el gráfico */
+}
+
+/* Nota de glosario con más aire abajo */
+.nota-glosario-idh {
+    margin-bottom: 45px !important;
+}
+
+/* Tarjeta clara unificada para los gráficos de barra */
 .contenedor-grafico-vega, .viz-full-width {
     width: 100%;
-    max-width: 960px; /* Ampliado a 960px para que entren todas las columnas de certámenes y leyendas derechas */
-    margin: 30px auto;
-    padding: 24px;
+    max-width: 980px; /* Espacio total para las leyendas derechas */
+    margin: 40px auto 60px auto; /* Equilibra el aire arriba y abajo del recuadro claro */
+    padding: 30px 24px;
     box-sizing: border-box;
-    background-color: #FAF9F6; /* Fondo claro sofisticado para dar perfecto contraste */
+    background-color: #FAF9F6;
     border: 1px solid rgba(201, 168, 106, 0.3);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -631,25 +641,25 @@ p {
     overflow: hidden;
 }
 
-/* Forzar que las cajas de gráficos e iframes respiren sin cortes */
+/* Forzar que los iframes internos tengan el alto real necesario para no cortar los ejes */
 .contenedor-grafico-vega iframe, .viz-full-width iframe, .grafico-idh-iframe {
     width: 100%;
-    height: 480px; /* Altura ideal para IDH y Estudios */
+    height: 520px; /* Para que la palabra "Décadas" y las leyendas respiren completo */
     border: none;
     background: transparent;
     display: block;
 }
 
-/* Altura extendida específica para el gráfico final (El Trampolín) para que quepan sus etiquetas */
+/* Altura específica controlada para el gráfico final del Trampolín */
 #vis-destino iframe {
-    height: 400px;
+    height: 420px;
 }
 
-/* Ajuste milimétrico del mapa para que quepa la leyenda completa, el texto y el rombo dorado */
+/* Ajuste definitivo del mapa para que fluyan las fuentes de la base de datos al fondo */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
-    height: 1020px; /* Subido a 1020px para asegurar que fluyan las líneas finales */
+    height: 1060px; /* Espacio exacto para el pie de mapa */
     border: none;
     background: transparent;
     overflow: hidden;
