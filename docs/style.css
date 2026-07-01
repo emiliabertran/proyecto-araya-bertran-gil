@@ -31,7 +31,7 @@ p {
     margin: 0 auto; 
 }
 
-/*  MENÚ DE NAVEGACIÓN */
+/* MENÚ DE NAVEGACIÓN */
 .navbar {
     position: fixed; 
     top: 0;
@@ -98,7 +98,6 @@ p {
 }
 
 /* Sección protagonista */
-
 #cecilia {
     background-color: #C9A86A; 
     color: #0A1633;            
@@ -159,13 +158,13 @@ p {
     line-height: 1.4;
 }
 
-/*  NUEVO RECUADRO: Tarjeta blanca sofisticada para el cierre */
+/* Tarjeta blanca sofisticada para el cierre */
 .tarjeta-cierre-narrativa {
     background-color: #FAF9F6;
-    border: 1px solid rgba(201, 168, 106, 0.25); /* Borde sutil dorado */
+    border: 1px solid rgba(201, 168, 106, 0.25); 
     border-radius: 12px;
     padding: 30px 35px;
-    box-shadow: 0 8px 24px rgba(10, 22, 51, 0.04); /* Sombra muy suave */
+    box-shadow: 0 8px 24px rgba(10, 22, 51, 0.04); 
     margin: 40px 0;
     text-align: left;
 }
@@ -176,10 +175,6 @@ p {
     color: #0A1633;            
     margin: 0;
 }
-
-
-
-/*  ALTERNANCIA DE COLORES POR SECCIÓN  */
 
 /* Icónicas */
 #iconicas {
@@ -202,7 +197,6 @@ p {
 }
 
 /* SECCIÓN COLLAGE DE IMÁGENES */
-
 .contenedor-collage {
     width: 100%;
     max-width: 1000px; 
@@ -227,14 +221,12 @@ p {
     line-height: 1.3;
 }
 
-/* La estructura de la grilla */
 .collage-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px; 
 }
 
-/* Comportamiento de cada tarjeta adaptado a tu estilo */
 .collage-item {
     position: relative;
     background-color: #050b1a; 
@@ -249,20 +241,17 @@ p {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto sutil al pasar el mouse por las tarjetas */
 .collage-item:hover {
     transform: translateY(-3px);
     border-color: #C9A86A;
 }
 
-/* Tarjeta grande de Cecilia Bolocco */
 .collage-item.grande {
     grid-column: span 2;
     grid-row: span 2;
     min-height: 355px;
 }
 
-/* Ajuste de imágenes */
 .collage-img {
     width: 100%;
     height: 100%;
@@ -274,7 +263,6 @@ p {
     opacity: 0.75; 
 }
 
-/* Texto sobre las imágenes */
 .collage-caption {
     position: relative;
     z-index: 2;
@@ -315,7 +303,6 @@ p {
     margin: 0 0 20px 0 !important;
 }
 
-
 .tarjeta-cierre-iconicas .subtexto-cierre {
     color: #C9A86A !important; 
     font-size: 16px !important;
@@ -340,13 +327,11 @@ p {
     text-align: left;
 }
 
-/* Distribución de las dos columnas principales */
 .bloque-izquierdo { 
     flex: 1; 
     width: 100%;
 }
 
-/* Transformamos la columna de fotos en una cuadrícula de 2x2 */
 .bloque-derecho-imagenes { 
     flex: 1;
     display: grid; 
@@ -355,7 +340,6 @@ p {
     width: 100%;
 }
 
-/* El recuadro blanco de las palabras */
 .tarjeta-texto {
     background-color: #ffffff; 
     border: 1px solid rgba(201, 168, 106, 0.25); 
@@ -368,7 +352,6 @@ p {
 #promesa h2  { color: #C9A86A; text-align: left; margin: 5px 0 20px 0; font-size: 36px; }
 #parrafo_historia { color: #0A1633; margin: 0; max-width: 100%; font-size: 16px; line-height: 1.7; }
 
-/* Configuración y ALTURA de las fotos */
 .foto-promesa {
     height: 200px; 
     border-radius: 8px;
@@ -384,21 +367,19 @@ p {
     display: block; 
 }
 
-
 /* Compiten */
 #compiten {
     background-color: #0A1633; 
     color: #FAF9F6;
     width: 100% !important;   
     max-width: 100% !important;  
-    margin: 0;                   
+    margin: 0;                    
     box-sizing: border-box;
 }
 #compiten h2 {
     color: #C9A86A;
 }
 
-/* 📌 RECUADRO DESTACADO: Estilo Glosario / Nota Técnica a la izquierda */
 .nota-glosario-idh {
     text-align: left; 
     max-width: 320px; 
@@ -425,14 +406,13 @@ p {
     margin: 0;
 }
 
-
 /* Evolución */
 #evolucion {
     background-color: #FAF9F6; 
     color: #0A1633;
     width: 100% !important; 
     max-width: 100% !important; 
-    margin: 0;                   
+    margin: 0;                    
     box-sizing: border-box;
 }
 #evolucion h2 {
@@ -443,7 +423,7 @@ p {
 #trayectorias {
     background-color: #1C1C1C; 
     color: #FAF9F6;
-    width: 100% !important;    
+    width: 100% !important;   
     max-width: 100% !important;  
     margin: 0;                  
     box-sizing: border-box;
@@ -454,15 +434,6 @@ p {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-}
-
-.seccion-tag {
-    font-size: 11px; 
-    letter-spacing: 0.2em; 
-    text-transform: uppercase; 
-    color: #C9A86A; 
-    display: block; 
-    margin-bottom: 12px;
 }
 
 #trayectorias h2 {
@@ -479,19 +450,6 @@ p {
     color: #FAF9F6;
 }
 
-/* 📊 Recuadro punteado para el gráfico */
-.caja-grafico-trayectoria {
-    background-color: rgba(201, 168, 106, 0.05); 
-    border: 2px dashed rgba(201, 168, 106, 0.4); 
-    border-radius: 16px;
-    padding: 30px 20px;
-    margin-bottom: 40px;
-    color: #FAF9F6;
-}
-.caja-grafico-trayectoria p { margin: 0 0 5px 0; font-weight: bold; color: #C9A86A; }
-.caja-grafico-trayectoria span { font-size: 14px; opacity: 0.7; }
-
-/* 👑 Fila horizontal para las 3 tarjetas de las reinas */
 .contenedor-tarjetas-reinas {
     display: flex;
     gap: 20px;
@@ -499,7 +457,6 @@ p {
     width: 100%;
 }
 
-/* Estilo base de cada tarjeta */
 .tarjeta-reina {
     flex: 1;
     background-color: #ffffff; 
@@ -509,7 +466,6 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
-/* 📸 Espacio contenedor de la foto de la reina */
 .tarjeta-header-foto {
     width: 100%;
     height: 180px; 
@@ -524,7 +480,6 @@ p {
     display: block;
 }
 
-/* Contenido escrito de la tarjeta */
 .tarjeta-body {
     padding: 22px 15px;
     text-align: center;
@@ -548,15 +503,13 @@ p {
     font-size: 22px;
 }
 
-
-
 /* Hallazgo */
 #hallazgo {
     background-color: #050b1a; 
     color: #FAF9F6;
     width: 100% !important;      
     max-width: 100% !important;  
-    margin: 0;                   
+    margin: 0;                    
     box-sizing: border-box;
 }
 #hallazgo h2 {
@@ -611,13 +564,14 @@ p {
         opacity: 0; 
     }
 }
+
 /* =========================================================================
    🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes y espaciado premium)
    ========================================================================= */
 
 /* Forzar separación exclusiva abajo de los hallazgos clave */
 .side-text-right {
-    margin: 30px auto 50px auto !important;
+    margin: 30px auto 55px auto !important;
 }
 
 /* Nota de glosario con más aire abajo */
@@ -625,11 +579,11 @@ p {
     margin-bottom: 45px !important;
 }
 
-/* Tarjeta clara unificada para los TRES gráficos de barra */
+/* Tarjeta clara unificada para los TRES bloques de gráficos de barra */
 .contenedor-grafico-vega, .viz-full-width {
     width: 100%;
-    max-width: 1020px; /* Ampliado para que la leyenda de IDH y del Sí/No respiren completo */
-    margin: 30px auto 60px auto;
+    max-width: 1020px;
+    margin: 40px auto 60px auto;
     padding: 35px 25px;
     box-sizing: border-box;
     background-color: #FAF9F6;
@@ -641,27 +595,26 @@ p {
     overflow: hidden;
 }
 
-/* Forzar que las cajas de gráficos e iframes tengan altura suficiente para las décadas */
-.contenedor-grafico-vega iframe, .viz-full-width iframe, .grafico-idh-iframe {
+/* Desaparecer el fondo interno gris de Vega-Lite */
+.contenedor-grafico-vega .vega-embed {
+    background: transparent !important;
+}
+
+/* Forzar que las cajas e iframes usen la altura correcta para las décadas giradas */
+.contenedor-grafico-vega div, .viz-full-width iframe, .grafico-idh-iframe {
     width: 100%;
-    height: 580px; /* Subido a 580px para que las letras giradas de los años no sufran cortes */
+    height: 540px; 
     border: none;
     background: transparent;
     display: block;
 }
 
-/* Ajuste proporcional para achicar un pelo el gráfico interno y que no tope los bordes */
-.contenedor-grafico-vega iframe, #vis-destino iframe {
-    transform: scale(0.96);
-    transform-origin: top center;
+/* Altura ideal específica controlada para el iframe del IDH Comunal */
+.grafico-idh-iframe {
+    height: 540px; 
 }
 
-/* Altura específica controlada para el gráfico final del Trampolín */
-#vis-destino iframe {
-    height: 460px;
-}
-
-/* Ajuste definitivo del mapa para que fluyan las fuentes de la base de datos al fondo */
+/* Ajuste definitivo del mapa de Chile para que aparezca Magallanes y la fuente entera */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
