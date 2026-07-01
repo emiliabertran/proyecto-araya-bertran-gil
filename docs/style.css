@@ -210,8 +210,6 @@ p {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #C9A86A; 
-    display: block;
-    margin-bottom: 6px;
 }
 
 .collage-title {
@@ -566,25 +564,30 @@ p {
 }
 
 /* =========================================================================
-   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes y espaciado premium)
+   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes, cajas restauradas)
    ========================================================================= */
 
-/* Forzar separación exclusiva abajo de los hallazgos clave */
-.side-text-right {
-    margin: 30px auto 55px auto !important;
+/* Estilo unificado para las cajas de los Hallazgos Claves (1 y 2) */
+.recuadro-hallazgo-propio {
+    max-width: 620px; 
+    margin: 30px auto 40px auto; 
+    font-size: 15px; 
+    line-height: 1.7; 
+    color: #FAF9F6; 
+    background: #262626; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border-left: 3px solid #C9A86A; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
-/* Nota de glosario con más aire abajo */
-.nota-glosario-idh {
-    margin-bottom: 45px !important;
-}
-
-/* Tarjeta clara unificada para los TRES bloques de gráficos de barra */
-.contenedor-grafico-vega, .viz-full-width {
+/* Tarjeta clara unificada para envolver los gráficos */
+.viz-full-width {
     width: 100%;
-    max-width: 1020px;
-    margin: 40px auto 60px auto;
-    padding: 35px 25px;
+    max-width: 1040px; 
+    margin: 30px auto 45px auto;
+    padding: 30px 20px;
     box-sizing: border-box;
     background-color: #FAF9F6;
     border: 1px solid rgba(201, 168, 106, 0.3);
@@ -595,26 +598,31 @@ p {
     overflow: hidden;
 }
 
-/* Desaparecer el fondo interno gris de Vega-Lite */
-.contenedor-grafico-vega .vega-embed {
-    background: transparent !important;
-}
-
-/* Forzar que las cajas e iframes usen la altura correcta para las décadas giradas */
-.contenedor-grafico-vega div, .viz-full-width iframe, .grafico-idh-iframe {
+/* Altura ideal para el iframe del IDH Comunal */
+.grafico-idh-iframe {
     width: 100%;
     height: 540px; 
     border: none;
-    background: transparent;
     display: block;
 }
 
-/* Altura ideal específica controlada para el iframe del IDH Comunal */
-.grafico-idh-iframe {
-    height: 540px; 
+/* Altura ideal para el gráfico de Nivel de Estudios */
+.grafico-estudios-iframe {
+    width: 100%;
+    height: 590px;
+    border: none;
+    display: block;
 }
 
-/* Ajuste definitivo del mapa de Chile para que aparezca Magallanes y la fuente entera */
+/* Altura ideal para el gráfico del Trampolín */
+.grafico-destino-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+/* Ajuste fluido del mapa de Chile */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
