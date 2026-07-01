@@ -97,6 +97,87 @@ p {
   margin: 20px auto;     
 }
 
+/* Sección protagonista */
+
+#cecilia {
+    background-color: #C9A86A; 
+    color: #0A1633;            
+    padding: 80px 20px;        
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contenedor-narrativo {
+    max-width: 750px; 
+    margin: 0 auto;
+}
+
+#cecilia h1 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 42px;
+    line-height: 1.25;
+    color: #0A1633;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.parrafo-destacado {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #0A1633;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Caja contenedora de las dos fotos juntas */
+.galeria-introduccion {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.foto-intro {
+    flex: 1; 
+    text-align: left;
+}
+
+.foto-intro img {
+    width: 100%;
+    height: 240px; 
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(10, 22, 51, 0.08);
+}
+
+.pie-de-foto {
+    display: block;
+    font-size: 12px;
+    color: #0A1633;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/*  NUEVO RECUADRO: Tarjeta blanca sofisticada para el cierre */
+.tarjeta-cierre-narrativa {
+    background-color: #FAF9F6;
+    border: 1px solid rgba(201, 168, 106, 0.25); /* Borde sutil dorado */
+    border-radius: 12px;
+    padding: 30px 35px;
+    box-shadow: 0 8px 24px rgba(10, 22, 51, 0.04); /* Sombra muy suave */
+    margin: 40px 0;
+    text-align: left;
+}
+
+.tarjeta-cierre-narrativa p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #0A1633;            
+    margin: 0;
+}
+
+
 
 /*  ALTERNANCIA DE COLORES POR SECCIÓN  */
 
@@ -216,6 +297,33 @@ p {
     color: #C9A86A; 
 }
 
+.tarjeta-cierre-iconicas {
+    background-color: #0A1633 !important; 
+    border: 1px solid rgba(250, 249, 246, 0.2); 
+    border-radius: 12px;
+    padding: 35px;
+    max-width: 700px; 
+    margin: 40px auto 0 auto; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center; 
+}
+
+.tarjeta-cierre-iconicas p {
+    color: #FAF9F6 !important; 
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin: 0 0 20px 0 !important;
+}
+
+
+.tarjeta-cierre-iconicas .subtexto-cierre {
+    color: #C9A86A !important; 
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    letter-spacing: 0.02em;
+}
+
 /* Promesa */
 #promesa {
     background-color: #1C1C1C; 
@@ -224,7 +332,7 @@ p {
 
 .contenedor-promesa-grid {
     width: 100%;
-    max-width: 1000px; /* Lo agrandamos un poquito más para que el collage luzca mejor */
+    max-width: 1000px; 
     margin: 0 auto;
     display: flex;
     gap: 40px;
@@ -238,12 +346,12 @@ p {
     width: 100%;
 }
 
-/* 📊 Transformamos la columna de fotos en una cuadrícula de 2x2 */
+/* Transformamos la columna de fotos en una cuadrícula de 2x2 */
 .bloque-derecho-imagenes { 
     flex: 1;
     display: grid; 
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
-    gap: 12px; /* Espacio de separación entre las 4 fotos */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; 
     width: 100%;
 }
 
@@ -260,9 +368,9 @@ p {
 #promesa h2  { color: #C9A86A; text-align: left; margin: 5px 0 20px 0; font-size: 36px; }
 #parrafo_historia { color: #0A1633; margin: 0; max-width: 100%; font-size: 16px; line-height: 1.7; }
 
-/* 🖼️ Configuración y ALTURA de las fotos */
+/* Configuración y ALTURA de las fotos */
 .foto-promesa {
-    height: 200px; /* 👈 MODIFICA ESTO si quieres que el collage sea más alto o más bajo */
+    height: 200px; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(10, 22, 51, 0.1);
@@ -276,11 +384,6 @@ p {
     display: block; 
 }
 
-/* Responsive para celulares */
-@media (max-width: 768px) {
-    .contenedor-promesa-grid { flex-direction: column; text-align: center; gap: 35px; }
-    #promesa h2 { text-align: center; }
-}
 
 /* Compiten */
 #compiten {
@@ -294,6 +397,34 @@ p {
 #compiten h2 {
     color: #C9A86A;
 }
+
+/* 📌 RECUADRO DESTACADO: Estilo Glosario / Nota Técnica a la izquierda */
+.nota-glosario-idh {
+    text-align: left; 
+    max-width: 320px; 
+    margin: 0 auto 35px auto; 
+    background-color: #262626; 
+    padding: 14px 18px; 
+    border-radius: 0 8px 8px 0; 
+    border-left: 3px solid #C9A86A; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nota-glosario-idh h3 {
+    color: #C9A86A; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+    font-size: 11px; 
+    margin: 0 0 5px 0;
+}
+
+.nota-glosario-idh p {
+    font-size: 13px; 
+    line-height: 1.6; 
+    color: #FAF9F6;
+    margin: 0;
+}
+
 
 /* Evolución */
 #evolucion {
@@ -350,8 +481,8 @@ p {
 
 /* 📊 Recuadro punteado para el gráfico */
 .caja-grafico-trayectoria {
-    background-color: rgba(201, 168, 106, 0.05); /* Fondo dorado sutil con opacidad */
-    border: 2px dashed rgba(201, 168, 106, 0.4); /* Línea punteada elegante */
+    background-color: rgba(201, 168, 106, 0.05); 
+    border: 2px dashed rgba(201, 168, 106, 0.4); 
     border-radius: 16px;
     padding: 30px 20px;
     margin-bottom: 40px;
@@ -371,17 +502,17 @@ p {
 /* Estilo base de cada tarjeta */
 .tarjeta-reina {
     flex: 1;
-    background-color: #ffffff; /* Fondo blanco para que resalten los textos */
+    background-color: #ffffff; 
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(201, 168, 106, 0.3);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra marcada para dar volumen */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
 /* 📸 Espacio contenedor de la foto de la reina */
 .tarjeta-header-foto {
     width: 100%;
-    height: 180px; /* Controla la altura visual de la imagen */
+    height: 180px; 
     overflow: hidden;
     background-color: #0A1633;
 }
@@ -389,7 +520,7 @@ p {
 .tarjeta-header-foto img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta y adapta la foto para que nunca se deforme */
+    object-fit: cover; 
     display: block;
 }
 
@@ -400,7 +531,7 @@ p {
 }
 
 .tarjeta-body h3 {
-    color: #0A1633; /* Azul oscuro para máxima legibilidad sobre fondo blanco */
+    color: #0A1633; 
     font-size: 19px;
     margin: 0 0 8px 0;
     font-weight: 700;
