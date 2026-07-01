@@ -612,24 +612,38 @@ p {
     }
 }
 /* =========================================================================
-   🛡️ AJUSTES DE DISEÑO RESPONSIVO CORREGIDOS (Cero cortes, cero scrolls)
+   🛡️ AJUSTES DE DISEÑO CORREGIDOS (Cero cortes, contraste premium)
    ========================================================================= */
 
-/* Espacio para los gráficos nuevos */
+/* Contenedor adaptativo para los gráficos de Vega/Altair */
 .contenedor-grafico-vega {
     width: 100%;
-    max-width: 700px;
-    margin: 20px auto;
+    max-width: 850px; /* Más ancho para que no se corte la leyenda derecha de estudios */
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FAF9F6; /* Fondo claro sofisticado para que resalten las letras oscuras */
+    border: 1px solid rgba(201, 168, 106, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     overflow: hidden;
 }
 
-/* Ajuste del mapa para que se vea COMPLETO hacia abajo */
+/* Forzar que los iframes dentro de los bloques usen el alto real necesario */
+.contenedor-grafico-vega iframe {
+    width: 100%;
+    height: 520px; /* Más alto para que no se corten las etiquetas de abajo ni los títulos */
+    border: none;
+    display: block;
+}
+
+/* Ajuste del mapa para que se vea COMPLETO con la leyenda y el diamante final */
 .mapa-fluido {
     width: 100%;
     max-width: 760px;
-    height: 940px; /* Le subimos la altura para que no se corte ninguna región */
+    height: 980px; /* Aumentado a 980px para dar espacio a la fuente y al ornamento */
     border: none;
     background: transparent;
     overflow: hidden;
