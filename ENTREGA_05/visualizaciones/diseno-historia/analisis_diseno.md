@@ -8,7 +8,7 @@ El recorrido comienza con figuras ampliamente reconocidas, como Cecilia Bolocco,
 
 Cada visualización fue incorporada para responder una parte del relato, permitiendo que la evidencia sustente la historia periodística.
 
-![Identidad visual](recursos/Identidad visual.jpeg)
+![Identidad visual](recursos/identidad-visual.jpeg)
 
 **Figura 1.** Manual de identidad visual desarrollado para la webstory.
 
