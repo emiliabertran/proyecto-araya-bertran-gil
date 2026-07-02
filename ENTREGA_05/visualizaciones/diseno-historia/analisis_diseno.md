@@ -67,6 +67,7 @@ La paleta cromática fue seleccionada para reforzar el concepto de elegancia y r
 Se seleccionó **Cormorant Garamond** para el logotipo debido a su estilo elegante y editorial.
 
 Para títulos y subtítulos se utilizó **Playfair Display**, mientras que **Inter** fue elegida para textos y datos por su alta legibilidad en plataformas digitales.
+![Ilustraciones](recursos/ilustraciones.jpeg)
 
 Estas tipografías permiten mantener una jerarquía visual clara y coherente con la identidad del proyecto.
 
@@ -78,7 +79,7 @@ Se diseñaron botones, íconos y elementos gráficos inspirados en la estética 
 
 Los botones fueron desarrollados para facilitar la navegación sin perder la identidad elegante de la webstory.
 
-![Botones e íconos](recursos/botones iconos.jpeg)
+![Botones e íconos](recursos/botones-iconos.jpeg)
 
 **Figura 4.** Botones e íconos desarrollados para la interfaz.
 
@@ -90,7 +91,7 @@ Las ilustraciones y recursos gráficos complementan el relato periodístico refo
 
 Se utilizaron imágenes con un tratamiento editorial y patrones discretos que aportan elegancia, manteniendo siempre el protagonismo de las visualizaciones y del contenido periodístico.
 
-![Ilustraciones](recursos/ilustraciones.jpeg)
+
 
 **Figura 5.** Estilo de ilustraciones y recursos gráficos utilizados en la webstory.
 
