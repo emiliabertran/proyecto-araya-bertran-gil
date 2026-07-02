@@ -334,7 +334,7 @@ p {
     flex: 1;
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px; 
+    gap: 13px; 
     width: 100%;
 }
 
@@ -374,17 +374,18 @@ p {
     margin: 0;                    
     box-sizing: border-box;
 }
+
 #compiten h2 {
     color: #C9A86A;
 }
 
 .nota-glosario-idh {
     text-align: left; 
-    max-width: 320px; 
-    margin: 0 auto 35px auto; 
-    background-color: #262626; 
+    max-width: 340px; 
+    margin: 0 auto 35px 100px; 
+    background-color: #16223E; 
     padding: 14px 18px; 
-    border-radius: 0 8px 8px 0; 
+    border-radius: 8px; 
     border-left: 3px solid #C9A86A; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -404,7 +405,35 @@ p {
     margin: 0;
 }
 
+.tarjeta-hallazgo-central {
+    max-width: 760px; 
+    margin: 0 auto 40px auto; 
+    background-color: #1F2B48; 
+    padding: 30px 35px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(201, 168, 106, 0.25); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    text-align: left; 
+    box-sizing: border-box;
+}
+
+.tarjeta-hallazgo-central h3 {
+    color: #C9A86A; 
+    font-family: 'Playfair Display', serif; 
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.tarjeta-hallazgo-central p {
+    color: #FAF9F6; 
+    font-size: 15.5px; 
+    line-height: 1.75; 
+    margin: 0;
+}
+
 /* Evolución */
+
 #evolucion {
     background-color: #FAF9F6; 
     color: #0A1633;
@@ -412,12 +441,97 @@ p {
     max-width: 100% !important; 
     margin: 0;                    
     box-sizing: border-box;
+    padding: 40px 20px;
 }
+
+.contenedor-evolucion-bloque {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; /* Mantiene la cabecera centrada */
+}
+
 #evolucion h2 {
     color: #C9A86A;
+    margin-top: 0;
+}
+
+#evolucion .seccion-tag {
+    font-size: 10px; 
+    letter-spacing: 0.2em; 
+    text-transform: uppercase; 
+    color: #C9A86A; 
+    display: block; 
+    margin-bottom: 8px;
+}
+
+.parrafo-introductorio-evolucion {
+    text-align: center; 
+    max-width: 700px; 
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Contenedor general del iframe del gráfico */
+#evolucion .viz-full-width {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.grafico-estudios-iframe {
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+/* Contenedor de la fila de estadísticas */
+.stat-row {
+    display: flex; 
+    gap: 16px; 
+    margin: 24px auto 0 auto; 
+    max-width: 700px; 
+    justify-content: center; 
+    flex-wrap: wrap; /* Permite adaptarse a móviles si no caben las tres de lado */
+}
+
+/* Pastillas estadísticas individuales */
+.stat-pill {
+    flex: 1; 
+    min-width: 160px; 
+    border: 1px solid #C9A86A; 
+    padding: 16px; 
+    text-align: center; 
+    border-radius: 8px; 
+    background: rgba(201, 168, 106, 0.05); /* Fondo sutil dorado traslúcido */
+    box-sizing: border-box;
+}
+
+/* Números grandes destacados */
+.stat-num {
+    font-family: 'Playfair Display', serif; 
+    font-size: 28px; 
+    color: #C9A86A; 
+    font-weight: bold;
+}
+
+/* Etiquetas explicativas debajo de los números */
+.stat-label {
+    font-size: 11px; 
+    color: #0A1633; 
+    text-transform: uppercase; 
+    letter-spacing: 0.08em; 
+    margin-top: 4px; 
+    font-weight: bold;
 }
 
 /* Trayectorias */
+/* ==========================================================================
+   5. SECCIÓN TRAYECTORIAS (100% EN CSS)
+   ========================================================================== */
+
 #trayectorias {
     background-color: #1C1C1C; 
     color: #FAF9F6;
@@ -434,10 +548,20 @@ p {
     text-align: center;
 }
 
+#trayectorias .seccion-tag {
+    font-size: 10px; 
+    letter-spacing: 0.2em; 
+    text-transform: uppercase; 
+    color: #C9A86A; 
+    display: block; 
+    margin-bottom: 8px;
+}
+
 #trayectorias h2 {
     color: #C9A86A;
     font-size: 36px;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 
 .parrafo-introduccion {
@@ -453,6 +577,7 @@ p {
     gap: 20px;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 45px; /* Espacio antes de las cajas */
 }
 
 .tarjeta-reina {
@@ -501,18 +626,106 @@ p {
     font-size: 22px;
 }
 
+/* 📦 RECUADROS DE ANÁLISIS ELEGANTES PARA ESTA SECCIÓN */
+.tarjeta-hallazgo-trayectorias {
+    max-width: 900px;
+    margin: 30px auto 0 auto; 
+    background-color: #262626; 
+    padding: 25px 30px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(201, 168, 106, 0.2); /* Borde dorado muy fino */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
+    text-align: left; 
+    box-sizing: border-box;
+}
+
+.tarjeta-hallazgo-trayectorias h3 {
+    color: #C9A86A; 
+    font-family: 'Playfair Display', serif; 
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.tarjeta-hallazgo-trayectorias p {
+    color: #FAF9F6; 
+    font-size: 15px; 
+    line-height: 1.7; 
+    margin: 0;
+}
+
 /* Hallazgo */
 #hallazgo {
-    background-color: #050b1a; 
+    background-color: #0A1633; 
     color: #FAF9F6;
-    width: 100% !important;      
+    width: 100% !important;   
     max-width: 100% !important;  
     margin: 0;                    
     box-sizing: border-box;
+    padding: 60px 20px 120px 20px !important; 
 }
 #hallazgo h2 {
-    color: #C9A86A;
+    color: #C9A86A !important;
 }
+
+/* IMPACTO */
+
+#impacto-fenomeno {
+    background-color: #0A1633; 
+    color: #FAF9F6;
+    width: 100% !important;   
+    max-width: 100% !important;  
+    margin: 0;                    
+    box-sizing: border-box;
+    }
+
+.contenedor-analisis-narrativo {
+    max-width: 750px; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.separador-dorado-cierre {
+    width: 80px;
+    height: 2px;
+    background-color: #C9A86A;
+    margin: 0 auto 40px auto;
+}
+
+#impacto-fenomeno h2 {
+    color: #C9A86A;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.bloque-narrativo-final {
+    text-align: left; 
+}
+
+.bloque-narrativo-final p {
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: #FAF9F6;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+/* Frase destacada */
+.frase-destacada-cierre {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #C9A86A;
+    border-left: 3px solid #C9A86A;
+    margin: 40px 0;
+    padding: 10px 0 10px 25px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
 
 /* BOTÓN COMENZAR */
 .boton-comenzar {
@@ -563,9 +776,6 @@ p {
     }
 }
 
-/* =========================================================================
-   🛡️ AJUSTES DE DISEÑO DEFINITIVOS (Cero cortes, cajas restauradas)
-   ========================================================================= */
 
 /* Estilo unificado para las cajas de los Hallazgos Claves (1 y 2) */
 .recuadro-hallazgo-propio {
