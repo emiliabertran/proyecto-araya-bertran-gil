@@ -5,7 +5,12 @@ html {
 }
 
 body {
-    background-color: #0A1633; 
+    background-image: linear-gradient(rgba(10, 22, 51, 0.75), rgba(10, 22, 51, 0.75)), url('fondo.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+
     font-family: 'Garamond', serif; 
     color: #FAF9F6; 
     margin: 0; 
@@ -16,7 +21,7 @@ h1 {
     color: #FAF9F6; 
     text-align: center; 
     margin-bottom: 20px;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 h2 {
@@ -75,7 +80,7 @@ p {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    background-color: #0A1633; 
+    background-color: transparent; 
 }
 
 .seccion-info {
@@ -432,6 +437,50 @@ p {
     margin: 0;
 }
 
+/* ==========================================================================
+   📸 FILA DE FOTOS HORIZONTALES (MISMO TAMAÑO) EN TRAMPOLÍN
+   ========================================================================== */
+
+.bloque-cuatro-concursos {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px; /* Se acopla perfectamente al ancho de .tarjeta-hallazgo-trayectorias */
+    margin: 40px auto 20px auto;
+    box-sizing: border-box;
+}
+
+.foto-concurso-item {
+    flex: 1;          /* Fuerza a las 4 cajas a medir exactamente el mismo ancho */
+    min-width: 0;
+    text-align: center;
+}
+
+.foto-concurso-item img {
+    width: 100%;
+    height: 160px;    /* 👈 Ajusta este número si las quieres más altas o más bajas */
+    object-fit: cover; /* Recorta la imagen de forma inteligente para que no se deforme */
+    border-radius: 8px;
+    border: 1px solid rgba(201, 168, 106, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.foto-concurso-item img:hover {
+    transform: scale(1.03);
+    border-color: #C9A86A;
+}
+
+.foto-concurso-item span {
+    display: block;
+    font-family: 'Garamond', serif;
+    color: #C9A86A;
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
 /* Evolución */
 
 #evolucion {
@@ -528,18 +577,15 @@ p {
 }
 
 /* Trayectorias */
-/* ==========================================================================
-   5. SECCIÓN TRAYECTORIAS (100% EN CSS)
-   ========================================================================== */
 
-#trayectorias {
+#trayectorias, #trampolin {
     background-color: #1C1C1C; 
     color: #FAF9F6;
     width: 100% !important;   
     max-width: 100% !important;  
     margin: 0;                  
     box-sizing: border-box;
-    padding: 60px 0 0 0;
+    padding: 40px 20px 40px 20px;
 }
 
 .contenedor-trayectorias {
@@ -668,15 +714,123 @@ p {
     color: #C9A86A !important;
 }
 
+/* carrusel */
+.contenedor-carrusel-bloque {
+    width: 100%;
+    max-width: 1040px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contenedor-carrusel-bloque h3 {
+    color: #C9A86A;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.subtitulo-carrusel {
+    font-size: 15px !important;
+    color: #FAF9F6;
+    opacity: 0.8;
+    margin-bottom: 30px !important;
+    text-align: center;
+}
+
+/* Scroll lateral fluido */
+.carrusel-slider {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Personalización barra inferior de scroll */
+.carrusel-slider::-webkit-scrollbar {
+    height: 6px;
+}
+.carrusel-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(201, 168, 106, 0.4);
+    border-radius: 4px;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px 5px;
+}
+
+/* Tarjetas reducidas de ancho para que se luzcan las 17 en horizontal */
+.carrusel-item-card {
+    flex: 0 0 190px; 
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 168, 106, 0.25);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-item-card:hover {
+    transform: translateY(-4px);
+}
+
+.carrusel-foto-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background-color: #16223E;
+}
+
+.carrusel-foto-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carrusel-info {
+    padding: 12px;
+}
+
+.carrusel-info h4 {
+    color: #0A1633;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+/* Tags sutiles por certamen */
+.carrusel-tag-certamen {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.carrusel-tag-certamen.un { background-color: #fce4ec; color: #c2185b; }
+.carrusel-tag-certamen.mm { background-color: #e8eaf6; color: #1a237e; }
+.carrusel-tag-certamen.me { background-color: #efebe9; color: #5d4037; }
+
+
 /* IMPACTO */
 
 #impacto-fenomeno {
-    background-color: #0A1633; 
+    background-color: transparent; 
     color: #FAF9F6;
     width: 100% !important;   
     max-width: 100% !important;  
     margin: 0;                    
     box-sizing: border-box;
+    min-height: 100vh;
+    padding: 80px auto;
     }
 
 .contenedor-analisis-narrativo {
@@ -776,70 +930,3 @@ p {
     }
 }
 
-
-/* Estilo unificado para las cajas de los Hallazgos Claves (1 y 2) */
-.recuadro-hallazgo-propio {
-    max-width: 620px; 
-    margin: 30px auto 40px auto; 
-    font-size: 15px; 
-    line-height: 1.7; 
-    color: #FAF9F6; 
-    background: #262626; 
-    padding: 20px; 
-    border-radius: 8px; 
-    border-left: 3px solid #C9A86A; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-/* Tarjeta clara unificada para envolver los gráficos */
-.viz-full-width {
-    width: 100%;
-    max-width: 1040px; 
-    margin: 30px auto 45px auto;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    background-color: #FAF9F6;
-    border: 1px solid rgba(201, 168, 106, 0.3);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-/* Altura ideal para el iframe del IDH Comunal */
-.grafico-idh-iframe {
-    width: 100%;
-    height: 540px; 
-    border: none;
-    display: block;
-}
-
-/* Altura ideal para el gráfico de Nivel de Estudios */
-.grafico-estudios-iframe {
-    width: 100%;
-    height: 590px;
-    border: none;
-    display: block;
-}
-
-/* Altura ideal para el gráfico del Trampolín */
-.grafico-destino-iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    display: block;
-}
-
-/* Ajuste fluido del mapa de Chile */
-.mapa-fluido {
-    width: 100%;
-    max-width: 760px;
-    height: 1060px;
-    border: none;
-    background: transparent;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto;
-}
