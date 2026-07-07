@@ -539,7 +539,7 @@ p {
     max-width: 100% !important;  
     margin: 0;                  
     box-sizing: border-box;
-    padding: 60px 20px;
+    padding: 60px 0 0 0;
 }
 
 .contenedor-trayectorias {

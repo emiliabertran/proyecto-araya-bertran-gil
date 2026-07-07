@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detrás de la corona</title>
     <link rel="stylesheet" href="style.css?v=1.9">
+    <link rel="stylesheet" href="graficos/graficos_estilo.css?v=1.0">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.33.1/build/vega.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1/build/vega-lite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js"></script>
 </head>
 <body>
 
@@ -147,7 +148,157 @@
     <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">No todas provienen del mismo lugar.</p>
     
     <div style="width: 100%; max-width: 760px; margin: 0 auto 40px; display: flex; justify-content: center;">
-        <iframe src="mapa_chile_v2_labels.html" class="mapa-fluido" scrolling="no"></iframe>
+        <!--mapa_chile_v2_labels-->
+        <div class="wrapper">
+            <div class="ornament">✦ ✦ ✦</div>
+            <h1>Origen de las ganadoras<br><span>por región de Chile</span></h1>
+            <div class="subtitle">Miss Universo · Miss Mundo · Miss Internacional · Miss Earth · 1952–2025</div>
+
+            <svg width="760" height="780" viewBox="0 0 760 780" xmlns="http://www.w3.org/2000/svg" id="chile-map">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                </defs>
+
+                <!-- ══════════════ REGIONES ══════════════ -->
+                <!-- Arica y Parinacota -->
+                <path id="r-arica" d="M230,18 L285,18 L292,38 L278,55 L232,52 L220,36 Z" fill="#152238" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Tarapacá -->
+                <path id="r-tarapaca" d="M232,52 L278,55 L283,82 L268,100 L228,96 L218,72 Z" fill="#1d3050" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Antofagasta -->
+                <path id="r-antofagasta" d="M228,96 L268,100 L274,152 L252,182 L220,172 L210,130 Z" fill="#152238" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Atacama -->
+                <path id="r-atacama" d="M220,172 L252,182 L256,216 L238,238 L208,228 L200,200 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Coquimbo -->
+                <path id="r-coquimbo" d="M208,228 L238,238 L242,272 L224,296 L196,286 L188,258 Z" fill="#35568a" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Valparaíso -->
+                <path id="r-valparaiso" d="M196,286 L224,296 L228,322 L210,340 L184,330 L178,308 Z" fill="#4468a0" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Metropolitana -->
+                <path id="r-metropolitana" d="M184,330 L210,340 L215,362 L198,378 L172,368 L166,346 Z" fill="#C9A86A" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- O'Higgins -->
+                <path id="r-ohiggins" d="M172,368 L198,378 L200,402 L182,418 L158,408 L154,384 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Maule -->
+                <path id="r-maule" d="M158,408 L182,418 L183,446 L162,460 L140,450 L136,424 Z" fill="#152238" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Biobío -->
+                <path id="r-biobio" d="M140,450 L162,460 L163,490 L140,504 L118,492 L116,464 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Araucanía -->
+                <path id="r-araucania" d="M118,492 L140,504 L140,532 L116,546 L96,534 L94,506 Z" fill="#35568a" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Los Ríos -->
+                <path id="r-losrios" d="M96,534 L116,546 L114,568 L90,578 L74,566 L74,542 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Los Lagos -->
+                <path id="r-loslagos" d="M74,542 L90,578 L86,610 L58,620 L44,606 L46,572 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+                <!-- Magallanes -->
+                <path id="r-magallanes" d="M44,680 L90,672 L108,692 L96,720 L58,728 L34,712 Z" fill="#253d62" stroke="#0A1633" stroke-width="1.2" cursor="pointer"/>
+
+                <!-- ══════════════ LÍNEAS + ETIQUETAS (lado derecho) ══════════════ -->
+                <!-- cada línea va desde el centroide de la región hacia la derecha -->
+
+                <!-- Arica y Parinacota: 1 -->
+                <line x1="258" y1="36" x2="360" y2="36" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="258" cy="36" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="33" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Arica y Parinacota</text>
+                <text x="365" y="44" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">1 ganadora</text>
+
+                <!-- Tarapacá: 2 -->
+                <line x1="252" y1="76" x2="360" y2="76" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="252" cy="76" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="73" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Tarapacá</text>
+                <text x="365" y="84" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">2 ganadoras</text>
+
+                <!-- Antofagasta: 1 -->
+                <line x1="244" y1="138" x2="360" y2="138" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="244" cy="138" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="135" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Antofagasta</text>
+                <text x="365" y="146" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">1 ganadora</text>
+
+                <!-- Atacama: 3 -->
+                <line x1="232" y1="204" x2="360" y2="204" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="232" cy="204" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="201" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Atacama</text>
+                <text x="365" y="212" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">3 ganadoras</text>
+
+                <!-- Coquimbo: 6 -->
+                <line x1="218" y1="262" x2="360" y2="262" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="218" cy="262" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="259" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Coquimbo</text>
+                <text x="365" y="270" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">6 ganadoras</text>
+
+                <!-- Valparaíso: 12 -->
+                <line x1="205" y1="314" x2="360" y2="314" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="205" cy="314" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="311" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Valparaíso</text>
+                <text x="365" y="322" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">12 ganadoras</text>
+
+                <!-- Metropolitana: 107 — destacado -->
+                <line x1="193" y1="354" x2="360" y2="354" stroke="#C9A86A" stroke-width="1.2"/>
+                <circle cx="193" cy="354" r="4" fill="#C9A86A" filter="url(#glow)"/>
+                <text x="365" y="350" fill="#C9A86A" font-family="Playfair Display,serif" font-size="11" font-weight="700">Metropolitana</text>
+                <text x="365" y="362" fill="#C9A86A" font-family="Lato,sans-serif" font-size="10" font-weight="700">107 ganadoras ★</text>
+
+                <!-- O'Higgins: 3 -->
+                <line x1="178" y1="393" x2="360" y2="393" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="178" cy="393" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="390" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">O'Higgins</text>
+                <text x="365" y="401" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">3 ganadoras</text>
+
+                <!-- Maule: 1 -->
+                <line x1="162" y1="434" x2="360" y2="434" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="162" cy="434" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="431" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Maule</text>
+                <text x="365" y="442" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">1 ganadora</text>
+
+                <!-- Biobío: 4 -->
+                <line x1="140" y1="477" x2="360" y2="477" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="140" cy="477" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="474" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Biobío</text>
+                <text x="365" y="485" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">4 ganadoras</text>
+
+                <!-- Araucanía: 5 -->
+                <line x1="118" y1="519" x2="360" y2="519" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="118" cy="519" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="516" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Araucanía</text>
+                <text x="365" y="527" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">5 ganadoras</text>
+
+                <!-- Los Ríos: 3 -->
+                <line x1="96" y1="556" x2="360" y2="556" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="96" cy="556" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="553" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Los Ríos</text>
+                <text x="365" y="564" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">3 ganadoras</text>
+
+                <!-- Los Lagos: 4 -->
+                <line x1="68" y1="590" x2="360" y2="590" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="68" cy="590" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="587" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Los Lagos</text>
+                <text x="365" y="598" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">4 ganadoras</text>
+
+                <!-- Magallanes: 4 -->
+                <line x1="72" y1="700" x2="360" y2="700" stroke="#A6A6A6" stroke-width="0.8"/>
+                <circle cx="72" cy="700" r="2.5" fill="#C9A86A"/>
+                <text x="365" y="697" fill="#FAF9F6" font-family="Lato,sans-serif" font-size="10" font-weight="700">Magallanes</text>
+                <text x="365" y="708" fill="#C9A86A" font-family="Lato,sans-serif" font-size="9">4 ganadoras</text>
+
+                <!-- separador punteado entre Los Lagos y Magallanes -->
+                <line x1="30" y1="640" x2="200" y2="640" stroke="#A6A6A6" stroke-width="0.6" stroke-dasharray="4,4"/>
+                <text x="60" y="658" fill="#A6A6A6" font-family="Lato,sans-serif" font-size="8" font-style="italic">↓ salto geográfico</text>
+
+            </svg>
+
+            <div class="legend">
+                <div class="legend-item"><div class="legend-box" style="background:#C9A86A;"></div>107+ ganadoras</div>
+                <div class="legend-item"><div class="legend-box" style="background:#4468a0;"></div>10–20 ganadoras</div>
+                <div class="legend-item"><div class="legend-box" style="background:#35568a;"></div>4–9 ganadoras</div>
+                <div class="legend-item"><div class="legend-box" style="background:#253d62;"></div>2–5 ganadoras</div>
+                <div class="legend-item"><div class="legend-box" style="background:#152238;"></div>1 ganadora</div>
+            </div>
+
+            <div class="source">Base de datos propia · 156 registros · 1952–2025</div>
+            <div class="ornament">✦</div>
+        </div>
+
+        <div class="tooltip" id="tooltip"></div>
+
     </div>
 
     <div class="tarjeta-hallazgo-central">
@@ -163,7 +314,8 @@
     </div>
 
     <div class="viz-full-width">
-        <iframe src="grafico_idh_comunal.html" class="grafico-idh-iframe" scrolling="no"></iframe>
+        <!-- grafico_idh_comunal-->
+        <div id="idh-comunal"></div>
     </div>
 
     <div class="tarjeta-hallazgo-central">
@@ -188,8 +340,9 @@
         </p>
         
         <!-- Bloque del Gráfico de Estudios -->
-        <div class="viz-full-width">
-            <iframe src="grafico_nivel_estudios_colores_nuevos.html" class="grafico-estudios-iframe" scrolling="no"></iframe>
+        <div class="viz-fulsl-width">
+            <!-- grafico_nivel_estudios_colores_nuevos -->
+            <div id="estudios-chart"></div>
         </div>
 
         <!-- Fila de Estadísticas / Pastillas (Pills) -->
@@ -274,7 +427,8 @@
             <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #FAF9F6;">Los concursos de belleza en Chile no son solo un espectáculo, son una institution producción de élites mediáticas. Del certamen a la televisión, del set al feed de Instagram: la corona es solo el primer paso.</p>
             
             <div class="viz-full-width">
-                <iframe src="grafico_destino_postcertamen_colores_nuevos.html" class="grafico-destino-iframe" scrolling="no"></iframe>
+                <!--grafico_destino_postcertamen-->
+                <div id="destino-chart"></div>
             </div>
         </div>
         <div class="tarjeta-hallazgo-trayectorias">
@@ -313,5 +467,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="graficos/graficos_compilado.js"></script>
 </body>
 </html>
