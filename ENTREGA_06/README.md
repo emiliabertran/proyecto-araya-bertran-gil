@@ -1,1 +1,59 @@
+# Detrás de la Corona
+## El circuito de la belleza y la carrera en medios en Chile
+
+---
+
+# Resumen del reportaje
+
+Los concursos de belleza han sido históricamente presentados como espacios donde se elige a la representante del país en escenarios internacionales. Sin embargo, detrás de cada corona existen trayectorias personales, contextos sociales y oportunidades que ayudan a comprender quiénes han ocupado estos espacios de representación.
+
+Este reportaje analiza 156 registros de representantes chilenas en los principales certámenes internacionales del **Big Four** (Miss Universo, Miss Mundo, Miss Internacional y Miss Tierra) para identificar patrones relacionados con su origen territorial, el nivel de desarrollo de las comunas donde crecieron, su formación académica y la trayectoria profesional que desarrollaron posteriormente.
+
+A través del periodismo de datos y la visualización de información, la investigación propone una mirada que va más allá de la competencia, entendiendo la corona como una plataforma que puede abrir oportunidades en medios de comunicación, el espectáculo y otros espacios de influencia pública.
+
+---
+
+# Hipótesis inicial
+
+La investigación comenzó con la siguiente hipótesis:
+
+> Las representantes chilenas en los principales certámenes internacionales comparten características territoriales, sociales y profesionales que podrían influir en sus posibilidades de acceder a estos espacios de representación y posterior visibilidad pública.
+
+---
+
+# Análisis de la hipótesis
+
+A medida que avanzó la investigación y se consolidó la base de datos, la hipótesis evolucionó.
+
+Más que demostrar una relación directa entre el nivel socioeconómico y la participación en concursos de belleza, el análisis permitió identificar patrones relacionados con el territorio, el desarrollo de las comunas de origen, la formación académica y la posterior inserción en espacios de alta exposición pública.
+
+Los resultados muestran una importante concentración de representantes provenientes de comunas con altos índices de desarrollo humano, además de una constante presencia posterior en televisión, medios de comunicación y otras actividades públicas. Estos hallazgos permitieron comprender que los certámenes de belleza no solo representan competencias estéticas, sino también espacios donde convergen oportunidades, visibilidad y proyección profesional.
+
+# Proceso de construcción de la webstory
+
+El desarrollo de la webstory fue un proceso interdisciplinario que combinó investigación periodística, análisis de datos, diseño de información y desarrollo web. Como equipo, ninguna de las integrantes contaba con experiencia previa en programación web, por lo que el proceso implicó un aprendizaje constante en HTML, CSS y JavaScript.
+
+Para resolver dudas técnicas y comprender la lógica de implementación de la página, utilizamos herramientas de inteligencia artificial como Gemini, las cuales nos permitieron explorar distintas soluciones de código, corregir errores y adaptar fragmentos a las necesidades específicas del proyecto. Estas herramientas fueron utilizadas como apoyo para el aprendizaje y la resolución de problemas técnicos, mientras que la integración, edición y adaptación del código fueron realizadas por el equipo.
+
+Además, durante el proceso contamos con la orientación puntual de un estudiante de Ingeniería —pareja de una de las integrantes del equipo—, quien nos explicó conceptos básicos sobre la estructura y funcionamiento del código. Esta asesoría nos permitió comprender mejor la lógica detrás de HTML, CSS y JavaScript, facilitando la implementación de la webstory sin reemplazar el trabajo realizado por el equipo.
+
+Uno de los principales desafíos fue la integración de las visualizaciones de datos dentro de la página. Durante el desarrollo surgieron problemas relacionados con la adaptación de los gráficos al diseño responsivo, diferencias de visualización entre el entorno local y GitHub Pages, y errores en la carga de los estilos. En distintas etapas algunos gráficos perdieron su configuración de colores o dejaron de visualizarse correctamente una vez publicados, por lo que fue necesario revisar el código, ajustar las hojas de estilo y realizar múltiples pruebas hasta lograr una presentación coherente con la identidad visual del proyecto.
+
+
+---
+
+# Tabla de autoría
+
+| Área de trabajo | Emilia Bertrán | Antonia Araya | Anghy Gil |
+|:----------------|:--------------:|:-------------:|:---------:|
+| Desarrollo HTML | ✓ | | |
+| Desarrollo CSS | ✓ | | |
+| Desarrollo JavaScript | ✓ | | |
+| Diseño e implementación de la webstory | ✓ | | |
+| Elaboración de visualizaciones | | ✓ | |
+| Limpieza y procesamiento de datos | | ✓ | |
+| Análisis de datos | | ✓ | |
+| Relato periodístico | | | ✓ |
+| Redacción de la narrativa | | | ✓ |
+| Documentación del proyecto | ✓ | ✓ | ✓ |
 
